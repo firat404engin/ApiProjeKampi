@@ -43,7 +43,7 @@ namespace ApiProjeKampi.WebApi.Controllers
             var value = _context.Messages.Find(id);
             _context.Messages.Remove(value);
             _context.SaveChanges();
-            return Ok("Silme işlem başarılı");
+            return Ok("Mesaj Silme işlem başarılı");
         }
 
 
