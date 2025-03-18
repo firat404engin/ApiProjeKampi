@@ -1,4 +1,5 @@
 using ApiProjeKampi.WebApi.Context;
+using System.Reflection;
 
 namespace ApiProjeKampi.WebApi
 {
@@ -8,6 +9,7 @@ namespace ApiProjeKampi.WebApi
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
             builder.Services.AddDbContext<ApiContext>();
             // Add services to the container.
 
