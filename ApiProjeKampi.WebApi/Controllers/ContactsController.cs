@@ -17,6 +17,7 @@ namespace ApiProjeKampi.WebApi.Controllers
             _context = context;
         }
 
+
         [HttpGet]
         public IActionResult ContactList()
         {
@@ -65,7 +66,7 @@ namespace ApiProjeKampi.WebApi.Controllers
             contact.OpenHours= updateContactDto.OpenHours;
             _context.Contacts.Update(contact);
             _context.SaveChanges(); 
-            return Ok("Güncelleme işlemi başarılı");
+            return Ok("Güncelleme işlemi Başarılı");
         }
     }
 }

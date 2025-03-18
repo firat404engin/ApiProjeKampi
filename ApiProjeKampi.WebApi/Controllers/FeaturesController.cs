@@ -33,12 +33,13 @@ namespace ApiProjeKampi.WebApi.Controllers
             var value = _mapper.Map<Feature>(createFeatureDto);
             _context.Features.Add(value);
             _context.SaveChanges();
-            return Ok("Ekleme işlemi başarılı.");
+            return Ok("Özellik Ekleme işlemi başarılı.");
         }
 
         [HttpDelete]
         public IActionResult DeleteFeature(int id)
         {
+
             var value = _context.Features.Find(id);
             _context.Features.Remove(value);
             _context.SaveChanges();
